@@ -9,7 +9,7 @@ This UI template is licensed under the **MIT License**, which allows free use, m
 You can find the original template and license information here:  
 https://github.com/minimal-ui-kit/material-kit-react
 
-```
+```text
 **Project Structure**
 6G-XR/
 ├── Unified/               # Django backend for Unified
