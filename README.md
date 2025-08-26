@@ -100,16 +100,24 @@ npm install
 npm run build
 
 9. nginx Configuration
+
 cd ../../nginx
+
 copy 'nextjs' and 'portals' files to your server at the following path: /etc/nginx/sites-available/
 
 10. systemd Service Setup
 cd ../../services
+
 copy all service files to your server at the following path: /etc/systemd/system/
+
 Enable & Start Services:
+
 sudo systemctl daemon-reload
+
 sudo systemctl enable <name>.service
+
 sudo systemctl start <name>.service
+
 
 
 **Troubleshooting**:
