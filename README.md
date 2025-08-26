@@ -24,6 +24,7 @@ https://github.com/minimal-ui-kit/material-kit-react
 ├── Slice1-dashboard/      # Grafana dashboard configuration for slice 1
 ├── Slice2-dashboard/      # Grafana dashboard configuration for slice 2
 ├── LICENSE                # MIT License
+├── 6G-XR-Unified-and-North-web-portal.mp4               # Portal demonstration video
 └── README.md              # This guide
 ```
 
