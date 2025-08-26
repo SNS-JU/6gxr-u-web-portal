@@ -1,8 +1,8 @@
-Unified & North Web Portals Deployment Guide
+# Unified & North Web Portals Deployment Guide
 
 This repository contains two Django-based web applications (Unified and North) with their own frontends, connected to a PostgreSQL database and served with gunicorn and nginx. Systemd unit files are provided to simplify deployment.
 
-**UI Template Notice**:
+#### **UI Template Notice** #### :
 
 As the frontend application, we use the *Material Kit React* template provided by the `minimal-ui-kit` team.
 This UI template is licensed under the **MIT License**, which allows free use, modification, and distribution, including for commercial purposes.
