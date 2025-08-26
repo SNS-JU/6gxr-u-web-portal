@@ -53,51 +53,63 @@ _ systemd (Linux)
 
 #Installation Instructions
 1. Clone the Repository
+```
 git clone https://your.git.repo/6g-xr.git
 cd 6g-xr
-
+```
 2. Setup Python Virtual Environment (Unified)
 cd Unified
+```
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python manage.py collectstatic
+```
 
 3. Use this command to generate a secret key, and use it in the settings file of both projects:
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 
 ## Setup database for Unified web portal
 4. Go to the settings file and set your Database parameters.
+```
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
+```
 
 
 5. Repeat the same for North portal:
 cd ../../North
+```
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python manage.py collectstatic
+```
 
 **6. Use the unified secret key in the settings file of North portal.**
 
 ## Setup database for North web portal
 7. Go to settings file and set your Database parameters.
+```
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
+```
 
 ## Unified frontend
 8. Build Frontend (React + Vite)
+```
 cd ../../Unified_front
 npm install
 npm run build
-
+```
 ## North frontend
+```
 cd ../../north_front
 npm install
 npm run build
+```
 
 9. nginx Configuration
 
@@ -111,13 +123,13 @@ cd ../../services
 copy all service files to your server at the following path: /etc/systemd/system/
 
 Enable & Start Services:
-
+```
 sudo systemctl daemon-reload
 
 sudo systemctl enable <name>.service
 
 sudo systemctl start <name>.service
-
+```
 
 
 **Troubleshooting**:
