@@ -57,8 +57,9 @@ git clone https://your.git.repo/6g-xr.git
 cd 6g-xr
 ```
 2. Setup Python Virtual Environment (Unified)
-cd Unified
+
 ```
+cd Unified
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -66,10 +67,12 @@ python manage.py collectstatic
 ```
 
 3. Use this command to generate a secret key, and use it in the settings file of both projects:
+```
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
 
 ## Setup database for Unified web portal
-4. Go to the settings file and set your Database parameters.
+4. Go to the settings file and set your Database parameters and then:
 ```
 python manage.py makemigrations
 python manage.py migrate
@@ -78,8 +81,9 @@ python manage.py createsuperuser
 
 
 5. Repeat the same for North portal:
-cd ../../North
+
 ```
+cd ../../North
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -89,7 +93,7 @@ python manage.py collectstatic
 **6. Use the unified secret key in the settings file of North portal.**
 
 ## Setup database for North web portal
-7. Go to settings file and set your Database parameters.
+7. Go to settings file and set your Database parameters and then:
 ```
 python manage.py makemigrations
 python manage.py migrate
@@ -114,12 +118,17 @@ npm run build
 
 cd ../../nginx
 
-copy 'nextjs' and 'portals' files to your server at the following path: /etc/nginx/sites-available/
+copy 'nextjs' and 'portals' files to your server at the following path:
+``` /etc/nginx/sites-available/
+```
 
 10. systemd Service Setup
+
 cd ../../services
 
-copy all service files to your server at the following path: /etc/systemd/system/
+copy all service files to your server at the following path: 
+```/etc/systemd/system/
+```
 
 Enable & Start Services:
 ```
@@ -132,7 +141,9 @@ sudo systemctl start <name>.service
 
 
 **Troubleshooting**:
-Backend logs: journalctl -u <name>.service
+Backend logs: 
+```journalctl -u <name>.service
+```
 
 
 ## License
