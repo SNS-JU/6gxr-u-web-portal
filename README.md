@@ -40,18 +40,18 @@ https://github.com/minimal-ui-kit/material-kit-react
 
 **Prerequisites**:
 
-Python 3.10+
+_ Python 3.10+
 
-Node.js 18+
+_ Node.js 18+
 
-PostgreSQL
+_ PostgreSQL
 
-nginx
+_ nginx
 
-systemd (Linux)
+_ systemd (Linux)
 
 
-**Installation Instructions**
+#Installation Instructions
 1. Clone the Repository
 git clone https://your.git.repo/6g-xr.git
 cd 6g-xr
@@ -66,7 +66,7 @@ python manage.py collectstatic
 3. Use this command to generate a secret key, and use it in the settings file of both projects:
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 
-# Setup database
+## Setup database for Unified web portal
 4. Go to the settings file and set your Database parameters.
 python manage.py makemigrations
 python manage.py migrate
@@ -82,19 +82,19 @@ python manage.py collectstatic
 
 **6. Use the unified secret key in the settings file of North portal.**
 
-# Setup database
+## Setup database for North web portal
 7. Go to settings file and set your Database parameters.
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 
+## Unified frontend
 8. Build Frontend (React + Vite)
-# Unified frontend
 cd ../../Unified_front
 npm install
 npm run build
 
-# North frontend
+## North frontend
 cd ../../north_front
 npm install
 npm run build
@@ -117,6 +117,5 @@ Backend logs: journalctl -u <name>.service
 
 
 ## License
-
 This project is licensed under the [MIT License](./LICENSE).
 
