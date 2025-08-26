@@ -51,8 +51,8 @@ systemd (Linux)
 
 **Installation Instructions**
 1. Clone the Repository
-git clone https://your.git.repo/6g-xr.git
-cd 6g-xr
+git clone https://github.com/SNS-JU/6gxr-u-web-portal.git
+cd 6gxr-u-web-portal
 
 2. Setup Python Virtual Environment (Unified)
 cd Unified
@@ -116,5 +116,5 @@ Backend logs: journalctl -u <name>.service
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the MIT License.
 
