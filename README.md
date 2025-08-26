@@ -53,8 +53,8 @@ _ systemd (Linux)
 # Installation Instructions
 1. Clone the Repository
 ```
-git clone https://your.git.repo/6g-xr.git
-cd 6g-xr
+git clone https://github.com/SNS-JU/6gxr-unified-north-web-portals.git
+cd 6gxr-unified-north-web-portals
 ```
 2. Setup Python Virtual Environment (Unified)
 
