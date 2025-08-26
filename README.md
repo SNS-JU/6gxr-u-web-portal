@@ -26,7 +26,7 @@ https://github.com/minimal-ui-kit/material-kit-react
 ├── Slice2-dashboard/      # Grafana dashboard configuration for slice 2
 ├── LICENSE                # MIT License
 └── README.md              # This guide
-
+```
 
 **Port Mapping:**
 | **Service**               | **Description**                  | **Port** |
