@@ -148,6 +148,23 @@ Backend logs:
 journalctl -u <name>.service
 ```
 
+**Swagger**
+
+Unified web portal:
+```
+http://<Server IP>:8000/api/docs/swagger/
+http://<Server IP>:8000/api/docs/redoc/
+http://<Server IP>:8000/api/schema/
+```
+
+
+North web portal:
+```
+http://<Server IP>:8080/api/docs/swagger/
+http://<Server IP>:8080/api/docs/redoc/
+http://<Server IP>:8080/api/schema/
+```
+
 
 ## License
 This projects are licensed under the [MIT License](./LICENSE).
