@@ -9,22 +9,24 @@ This UI template is licensed under the **MIT License**, which allows free use, m
 You can find the original template and license information here:  
 https://github.com/minimal-ui-kit/material-kit-react
 
-**Project Structure**
+## Project Structure
 
+```text
 6G-XR/
-├── Unified/ # Django backend for Unified
-├── North/ # Django backend for North
-├── Unified_front/ # Frontend for Unified (Vite + React)
-├── north_front/ # Frontend for North (Vite + React)
-├── services/ # Systemd service files
-├── Nginx/ # Nginx configuration files
-├── Unified APIs/ # Unified API documentation
-├── North APIs/ # North API documentation
-├── Grafana.ini # Grafana configuration file
-├── Slice1-dashboard/ # Grafana dashboard configuration for slice 1
-├── Slice2-dashboard/ # Grafana dashboard configuration for slice 2
-├── LICENSE # MIT License
-└── README.md # This guide
+├── Unified/               # Django backend for Unified
+├── North/                 # Django backend for North
+├── Unified_front/         # Frontend for Unified (Vite + React)
+├── north_front/           # Frontend for North (Vite + React) 
+├── services/              # Systemd service files
+├── Nginx/                 # Nginx configuration files
+├── Unified APIs/          # Unified API documentation
+├── North APIs/            # North API documentation
+├── Grafana.ini            # Grafana configuration file
+├── Slice1-dashboard/      # Grafana dashboard configuration for slice 1
+├── Slice2-dashboard/      # Grafana dashboard configuration for slice 2
+├── LICENSE                # MIT License
+└── README.md              # This guide
+
 
 **Port Mapping:**
 | **Service**               | **Description**                  | **Port** |
