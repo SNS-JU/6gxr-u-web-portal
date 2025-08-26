@@ -119,7 +119,8 @@ npm run build
 cd ../../nginx
 
 copy 'nextjs' and 'portals' files to your server at the following path:
-``` /etc/nginx/sites-available/
+``` 
+/etc/nginx/sites-available/
 ```
 
 10. systemd Service Setup
@@ -127,7 +128,8 @@ copy 'nextjs' and 'portals' files to your server at the following path:
 cd ../../services
 
 copy all service files to your server at the following path: 
-```/etc/systemd/system/
+```
+/etc/systemd/system/
 ```
 
 Enable & Start Services:
