@@ -9,6 +9,7 @@ This UI template is licensed under the **MIT License**, which allows free use, m
 You can find the original template and license information here:  
 https://github.com/minimal-ui-kit/material-kit-react
 
+```
 **Project Structure**
 6G-XR/
 ├── Unified/               # Django backend for Unified
@@ -24,7 +25,7 @@ https://github.com/minimal-ui-kit/material-kit-react
 ├── Slice2-dashboard       # Grafana dashboard configuration for slice 2
 ├── License                # MIT License
 └── README.md              # This guide
-
+```
 
 **Port Mapping:**
 | **Service**               | **Description**                  | **Port** |
