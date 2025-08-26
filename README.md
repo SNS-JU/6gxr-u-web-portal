@@ -2,14 +2,13 @@
 
 This repository contains two Django-based web applications (Unified and North) with their own frontends, connected to a PostgreSQL database and served with gunicorn and nginx. Systemd unit files are provided to simplify deployment.
 
-#### **UI Template Notice** #### :
-
+**UI Template Notice** :
 As the frontend application, we use the *Material Kit React* template provided by the `minimal-ui-kit` team.
 This UI template is licensed under the **MIT License**, which allows free use, modification, and distribution, including for commercial purposes.
 You can find the original template and license information here:  
 https://github.com/minimal-ui-kit/material-kit-react
 
-## Project Structure
+### Project Structure
 
 ```text
 6G-XR/
@@ -51,7 +50,7 @@ _ nginx
 _ systemd (Linux)
 
 
-#Installation Instructions
+# Installation Instructions
 1. Clone the Repository
 ```
 git clone https://your.git.repo/6g-xr.git
