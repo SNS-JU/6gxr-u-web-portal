@@ -1,0 +1,378 @@
+openapi: 3.0.3
+info:
+  title: 6G-XR Project API- North Web Portal
+  version: 1.0.0
+  description: This document provides an overview of the available 6G-XR project APIs.
+paths:
+  /api/token/refresh/:
+    post:
+      operationId: token_refresh_create
+      description: |-
+        Takes a refresh type JSON web token and returns an access type JSON web
+        token if the refresh token is valid.
+      tags:
+      - token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRefreshRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TokenRefreshRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TokenRefreshRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenRefresh'
+          description: ''
+  /home/api/NstStatus/:
+    post:
+      operationId: home_api_NstStatus_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /home/api/checkrunning/:
+    get:
+      operationId: home_api_checkrunning_retrieve
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/checktrialid/:
+    post:
+      operationId: home_api_checktrialid_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/delete_related_slices/:
+    post:
+      operationId: home_api_delete_related_slices_create
+      description: Deletes NSTs and RunningSlice entries related to a Trial ID.
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/downloadcsvview/:
+    post:
+      operationId: home_api_downloadcsvview_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/downloadcsvview2/:
+    post:
+      operationId: home_api_downloadcsvview2_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/getnst/:
+    post:
+      operationId: home_api_getnst_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /home/api/grafana/:
+    get:
+      operationId: home_api_grafana_retrieve
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    post:
+      operationId: home_api_grafana_create
+      description: POST request to dynamically set the fields.
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/grafana2/:
+    get:
+      operationId: home_api_grafana2_retrieve
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/nst/:
+    post:
+      operationId: home_api_nst_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+    put:
+      operationId: home_api_nst_update
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+    delete:
+      operationId: home_api_nst_destroy
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '204':
+          description: No response body
+  /home/api/oulu-trials/:
+    post:
+      operationId: home_api_oulu_trials_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /home/api/runningnstmessage/:
+    get:
+      operationId: home_api_runningnstmessage_retrieve
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /home/api/sendquery/:
+    post:
+      operationId: home_api_sendquery_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /home/api/submit/:
+    post:
+      operationId: home_api_submit_create
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /home/api/terminate/{id}/:
+    delete:
+      operationId: home_api_terminate_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - home
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /users/api/Passresetconfirmtion/:
+    post:
+      operationId: users_api_Passresetconfirmtion_create
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /users/api/token/:
+    post:
+      operationId: users_api_token_create
+      description: |-
+        Takes a set of user credentials and returns an access and refresh JSON web
+        token pair to prove the authentication of those credentials.
+      tags:
+      - users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomTokenObtainPairRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CustomTokenObtainPairRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CustomTokenObtainPairRequest'
+        required: true
+      responses:
+        '200':
+          description: No response body
+  /users/api/users/delete/:
+    post:
+      operationId: users_api_users_delete_create
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /users/api/users/edit/:
+    get:
+      operationId: users_api_users_edit_retrieve
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    put:
+      operationId: users_api_users_edit_update
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /users/api/users/login/:
+    post:
+      operationId: users_api_users_login_create
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /users/api/users/logout/:
+    post:
+      operationId: users_api_users_logout_create
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /users/api/users/profile/:
+    get:
+      operationId: users_api_users_profile_retrieve
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /users/api/users/register/:
+    post:
+      operationId: users_api_users_register_create
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  schemas:
+    CustomTokenObtainPairRequest:
+      type: object
+      properties:
+        username:
+          type: string
+          writeOnly: true
+          minLength: 1
+        password:
+          type: string
+          writeOnly: true
+          minLength: 1
+      required:
+      - password
+      - username
+    TokenRefresh:
+      type: object
+      properties:
+        access:
+          type: string
+          readOnly: true
+      required:
+      - access
+    TokenRefreshRequest:
+      type: object
+      properties:
+        refresh:
+          type: string
+          writeOnly: true
+          minLength: 1
+      required:
+      - refresh
+  securitySchemes:
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+servers:
+- url: http://localhost:8000
+  description: Local
