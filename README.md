@@ -10,6 +10,7 @@ You can find the original template and license information here:
 https://github.com/minimal-ui-kit/material-kit-react
 
 **Project Structure**
+
 6G-XR/
 ├── Unified/ # Django backend for Unified
 ├── North/ # Django backend for North
