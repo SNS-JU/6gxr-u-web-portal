@@ -1,6 +1,6 @@
-Unified & North Web Portals Deployment Guide
+Unified Web Portal Deployment Guide
 
-This repository contains two Django-based web applications (Unified and North) with their own frontends, connected to a PostgreSQL database and served with gunicorn and nginx. Systemd unit files are provided to simplify deployment.
+This repository contains a Django-based web applications (Unified web portal) with its own frontend, connected to a PostgreSQL database and served with gunicorn and nginx. Systemd unit files are provided to simplify deployment.
 
 **UI Template Notice**:
 
