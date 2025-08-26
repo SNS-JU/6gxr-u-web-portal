@@ -144,10 +144,11 @@ sudo systemctl start <name>.service
 
 **Troubleshooting**:
 Backend logs: 
-```journalctl -u <name>.service
+```
+journalctl -u <name>.service
 ```
 
 
 ## License
-This project is licensed under the [MIT License](./LICENSE).
+This projects are licensed under the [MIT License](./LICENSE).
 
